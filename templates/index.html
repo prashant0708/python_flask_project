@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/Style.css"/>
+    </head>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            background-color: rgb(134, 188, 204);
+            position:relative;
+        }
+        
+        body{
+            font-family:sans-serif;
+            line-height:1;
+            color:black;
+        }
+        
+        .container{
+            width:30%;
+            background-color:rgb(163, 241, 198);
+            padding:20px  20px;
+            margin:60px;
+            position:absolute;
+            left:30%;
+            top:15px;
+            
+        }
+        .header,.heading{
+            text-align: center;
+            padding:16px,20px
+            margin:auto;
+            background-color:rgb(163, 241, 198);
+            text-decoration: underline;
+        }
+        .form{
+            display:flex;
+            flex-direction: column;
+            gap:20px;
+            background-color:rgb(163, 241, 198);
+        }
+
+        .science{
+            margin-top:12px;
+        }
+        .science,.math,.c,.datascience{
+            display:flex;
+            flex-direction: column;
+            gap:5px; 
+            
+            background-color:rgb(163, 241, 198);
+        }
+        .input{
+        background-color:rgb(163, 241, 198);
+        font-size:20px;
+        width:50%;
+        margin:auto;
+        padding:5px;
+        border: 3px solid green;
+        }
+
+        .input-text{
+            font-size:20px;
+            text-align: center;
+            background-color:rgb(163,241,198)
+        }
+
+        .submit-button{
+           
+            display:flex;
+            flex-direction: column;
+            alingn-items:center; 
+            width:50%;  
+            left:25%;
+            margin-bottom:15px;
+            
+        }
+        
+
+        .input-result{
+          font-size:25px;
+          background-color: rgb(167, 38, 38);
+        }
+        .input-result:hover{
+            background-color:rgb(236, 231, 240)
+            
+
+        }
+
+        .result{
+           height:5px;
+           text-align: center;
+           padding:5px 5px;
+           margin:5px;
+           background-color:rgb(163,241,198) 
+        }
+
+        .result-1{
+            background-color:rgb(163,241,198)
+
+
+        }
+
+
+    </style>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2 class="heading">HTML FORMS</h2>
+        </div>
+        <form method="POST" action="/results">
+            <div class="form">
+                <div class="science">
+                    <input type="text" name="Science" class="input"/>
+                    <label  class="input-text" for="Science">Science</label>
+                </div>
+                <div class="math">
+                    <input type="text" name="Math" class="input"/>
+                    <label class="input-text" for ="Math">Math</label>
+                </div>
+                
+                <div class="c">
+                    <input type="text" name="C" class="input"/>
+                    <label class="input-text" for"C">C</Label>
+                </div>
+               
+                <div class="datascience">
+                    <input type="text" name="DataScience" class="input"/>
+                    <label class="input-text" for="DataScience">DataScience</label>
+                </div>
+               
+                <div class="submit-button">
+                    <input type="submit" name="add" value='Add' class="input-result"/>
+                </div>
+               
+                <div class="submit-button">
+                    <input type="submit" name="avg" value='Avg' class="input-result"/>
+                </div>
+                
+            </div> 
+        </form>
+        
+        <div class="result">
+            <h2 class="result-1">{{result}}</h2>
+
+        </div>
+    </div> 
+
+</body>
+</html>
